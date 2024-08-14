@@ -12,7 +12,7 @@ namespace bp = boost::process;
 class python_interpreter
 {
     public:
-        python_interpreter(std::string console_name, std::string python_command = "python");
+        python_interpreter(std::string console_name, std::string python_command = "python -u -i");
         ~python_interpreter();
 
         std::string get_console_name();
