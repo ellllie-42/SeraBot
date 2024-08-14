@@ -18,7 +18,7 @@ struct new_window : ::boost::process::detail::handler_base {
 
 python_interpreter::python_interpreter(std::string console_name, std::string python_command) {
     auto env = ::boost::this_process::environment();
-    interpreter = bp::child(python_command, env, new_window{}, bp::std_in < pipe_in, bp::std_out > pipe_out);
+    interpreter = bp::child(python_command, env, /*new_window{},*/ bp::std_in < pipe_in, bp::std_out > pipe_out);
 
     std::string const test_str = "initialized";
     bool started = false;
