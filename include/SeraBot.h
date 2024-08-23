@@ -8,6 +8,10 @@
 ///current task:
 ///do thing //this is a joke
 ///implement sql backup
+///implement pip command
+///implement run command (run attached file or run code in message)
+
+std::string token_from_file(std::ifstream file);
 
 class SeraBot : public dpp::cluster
 {
@@ -23,7 +27,7 @@ class SeraBot : public dpp::cluster
 
 
     private:
-        const static int minor_version = 2;
+        const static int minor_version = 4;
         const static int major_version = 0;
         const static int revision_number = 0;
 };

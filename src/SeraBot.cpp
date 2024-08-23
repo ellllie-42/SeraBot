@@ -8,6 +8,13 @@
 
 //decompile command?
 
+std::string token_from_file(std::ifstream file)
+{
+    std::string token;
+    std::getline(file, token);
+    return token;
+}
+
 SeraBot::SeraBot(std::string bot_token) :
     dpp::cluster(bot_token)
 {
@@ -45,6 +52,9 @@ void SeraBot::msg_event(const dpp::message_create_t& event)
         return;
     }
     event.reply("Hello world!", true);
+
+    //need to implement some more logics here i guess
+
 }
 
 const std::string SeraBot::int_to_string(int _val)

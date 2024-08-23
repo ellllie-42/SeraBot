@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="SeraBot" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/SeraBot" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/SeraBot" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-pthread" />
+			<Add option="-std=c++20" />
+			<Add directory="include" />
+			<Add directory="C:/msys64/mingw64/include/python3.11" />
+			<Add directory="G:/libdpp/libdpp-10.0.30-mingw64/include" />
+		</Compiler>
+		<Linker>
+			<Add library="dpp" />
+			<Add library="libboost_system-mt" />
+			<Add library="libboost_system-mt.dll" />
+			<Add library="libboost_filesystem-mt" />
+			<Add library="libboost_filesystem-mt.dll" />
+			<Add library="libpython3.11.dll.a" />
+			<Add library="libboost_python311-mt.a" />
+			<Add library="libboost_python311-mt.dll.a" />
+			<Add library="libws2_32" />
+			<Add directory="G:/libdpp/libdpp-10.0.30-mingw64/lib" />
+			<Add directory="G:/libdpp/libdpp-10.0.30-mingw64/bin" />
+		</Linker>
+		<Unit filename="include/SeraBot.h" />
+		<Unit filename="include/python_interpreter.h" />
+		<Unit filename="src/SeraBot.cpp" />
+		<Unit filename="src/main.cpp" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
